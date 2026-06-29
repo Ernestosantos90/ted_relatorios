@@ -116,12 +116,32 @@ def gerar_html(pontos_calor, pontos, centro, resumo):
       font-size: 16px;
     }}
     .painel button {{
+      display: block;
+      width: 100%;
       margin-top: 10px;
       padding: 7px 9px;
       border: 1px solid #9ca3af;
       border-radius: 6px;
       background: #fff;
       cursor: pointer;
+    }}
+    .painel a.botao {{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 8px;
+      padding: 7px 9px;
+      border: 1px solid #9ca3af;
+      border-radius: 6px;
+      background: #fff;
+      color: #1f2937;
+      text-align: center;
+      text-decoration: none;
+      font-size: 13px;
+    }}
+    .painel a.botao:hover,
+    .painel button:hover {{
+      background: #f3f4f6;
     }}
   </style>
 </head>
@@ -131,6 +151,7 @@ def gerar_html(pontos_calor, pontos, centro, resumo):
     <h1>Mapa de Calor</h1>
     <div id="resumo"></div>
     <button id="alternar">Mostrar/ocultar pontos</button>
+    <a class="botao" href="relatorio_ministerio_empreendedorismo.html">Abrir relatório</a>
   </section>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
